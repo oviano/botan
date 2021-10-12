@@ -9,7 +9,6 @@
 #define BOTAN_TLS_MOCK_MSG_IMPL_13_H_
 
 #include <botan/exceptn.h>
-#include <botan/p11_x509.h>
 #include <botan/internal/msg_cert_req_impl.h>
 #include <botan/internal/msg_certificate_impl.h>
 #include <botan/tls_algos.h>

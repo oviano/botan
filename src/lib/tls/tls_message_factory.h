@@ -10,7 +10,6 @@
 
 #include <botan/tls_messages.h>
 #include <botan/tls_version.h>
-#include <botan/p11_x509.h>
 #include <botan/internal/tls_mock_msg_impl_13.h>
 
 #include <exception>
@@ -30,7 +29,6 @@ class Certificate_Impl;
 
 class Server_Hello_Impl_12;
 class Client_Hello_Impl_12;
-class Client_Hello_Impl_13;
 class Certificate_Req_Impl_12;
 class Certificate_Verify_Impl_12;
 class Certificate_Impl_12;

@@ -22,7 +22,6 @@
 #include <botan/internal/stl_util.h>
 #include <botan/internal/msg_client_hello_impl.h>
 #include <botan/internal/msg_client_hello_impl_12.h>
-#include <botan/internal/msg_client_hello_impl_13.h>
 #include <botan/internal/tls_message_factory.h>
 
 namespace Botan {
