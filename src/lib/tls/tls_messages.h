@@ -424,9 +424,6 @@ class BOTAN_UNSTABLE_API Certificate_Verify final : public Handshake_Message
    private:
       std::vector<uint8_t> serialize() const override;
 
-      std::vector<uint8_t> m_signature;
-      Signature_Scheme m_scheme = Signature_Scheme::NONE;
-
       std::unique_ptr<Certificate_Verify_Impl> m_impl;
    };
 
