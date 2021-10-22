@@ -45,6 +45,8 @@ Finished::Finished(const Protocol_Version& protocol_version, const std::vector<u
    {
    }
 
+// Needed for std::unique_ptr<> m_impl member, as *_Impl type
+// is available as a forward declaration in the header only.
 Finished::~Finished() = default;
 
 

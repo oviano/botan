@@ -68,6 +68,8 @@ Server_Hello::Server_Hello(const std::vector<uint8_t>& buf)
       m_impl = Message_Factory::create<Server_Hello_Impl>(protocol_version, buf);
    }
 
+// Needed for std::unique_ptr<> m_impl member, as *_Impl type
+// is available as a forward declaration in the header only.
 Server_Hello::~Server_Hello() = default;
 
 Handshake_Type Server_Hello::type() const

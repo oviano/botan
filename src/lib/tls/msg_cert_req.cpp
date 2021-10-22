@@ -61,6 +61,8 @@ Certificate_Req::Certificate_Req(const Protocol_Version& protocol_version, const
    {
    }
 
+// Needed for std::unique_ptr<> m_impl member, as *_Impl type
+// is available as a forward declaration in the header only.
 Certificate_Req::~Certificate_Req() = default;
 
 /**

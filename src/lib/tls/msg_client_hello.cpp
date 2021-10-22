@@ -98,6 +98,8 @@ Client_Hello::Client_Hello(const std::vector<uint8_t>& buf)
       m_impl = Message_Factory::create<Client_Hello_Impl>(protocol_version, buf);
    }
 
+// Needed for std::unique_ptr<> m_impl member, as *_Impl type
+// is available as a forward declaration in the header only.
 Client_Hello::~Client_Hello() = default;
 
 

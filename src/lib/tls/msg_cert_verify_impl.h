@@ -44,11 +44,11 @@ class Certificate_Verify_Impl : public Handshake_Message
                           const Handshake_State& state,
                           const Policy& policy) const;
 
-      explicit Certificate_Verify_Impl(Handshake_IO& io,
-                                       Handshake_State& state,
-                                       const Policy& policy,
-                                       RandomNumberGenerator& rng,
-                                       const Private_Key* key);
+      Certificate_Verify_Impl(Handshake_IO& io,
+                              Handshake_State& state,
+                              const Policy& policy,
+                              RandomNumberGenerator& rng,
+                              const Private_Key* key);
 
       explicit Certificate_Verify_Impl(const std::vector<uint8_t>& buf);
 

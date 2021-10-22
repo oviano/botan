@@ -40,6 +40,8 @@ Certificate_Verify::Certificate_Verify(const Protocol_Version& protocol_version,
    {
    }
 
+// Needed for std::unique_ptr<> m_impl member, as *_Impl type
+// is available as a forward declaration in the header only.
 Certificate_Verify::~Certificate_Verify() = default;
 
 /*

@@ -60,6 +60,11 @@ Finished_Impl::Finished_Impl(Handshake_IO& io,
    state.hash().update(io.send(*this));
    }
 
+Handshake_Type Finished_Impl::type() const
+   {
+   return FINISHED;
+   }
+
 /*
 * Serialize a Finished message
 */
