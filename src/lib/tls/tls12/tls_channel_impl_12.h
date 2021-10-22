@@ -77,23 +77,10 @@ class Channel_Impl_12 : public Channel_Impl
       size_t received_data(const uint8_t buf[], size_t buf_size) override;
 
       /**
-      * Inject TLS traffic received from counterparty
-      * @return a hint as the how many more bytes we need to process the
-      *         current record (this may be 0 if on a record boundary)
-      */
-      size_t received_data(const std::vector<uint8_t>& buf) override;
-
-      /**
       * Inject plaintext intended for counterparty
       * Throws an exception if is_active() is false
       */
       void send(const uint8_t buf[], size_t buf_size) override;
-
-      /**
-      * Inject plaintext intended for counterparty
-      * Throws an exception if is_active() is false
-      */
-      void send(const std::string& val) override;
 
       /**
       * Send a TLS alert message. If the alert is fatal, the internal
