@@ -325,10 +325,7 @@ std::vector<uint8_t> Client_Hello_Impl::cookie_input_data() const
 */
 bool Client_Hello_Impl::offered_suite(uint16_t ciphersuite) const
    {
-   for(size_t i = 0; i != m_suites.size(); ++i)
-      if(m_suites[i] == ciphersuite)
-         return true;
-   return false;
+   return std::find(m_suites.cbegin(), m_suites.cend(), ciphersuite) != m_suites.cend();
    }
 
 std::vector<Signature_Scheme> Client_Hello_Impl::signature_schemes() const
