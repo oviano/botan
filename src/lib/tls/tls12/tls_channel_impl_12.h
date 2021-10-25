@@ -90,16 +90,6 @@ class Channel_Impl_12 : public Channel_Impl
       void send_alert(const Alert& alert) override;
 
       /**
-      * Send a warning alert
-      */
-      void send_warning_alert(Alert::Type type) override { send_alert(Alert(type, false)); }
-
-      /**
-      * Send a fatal alert
-      */
-      void send_fatal_alert(Alert::Type type) override { send_alert(Alert(type, true)); }
-
-      /**
       * Send a close notification alert
       */
       void close() override { send_warning_alert(Alert::CLOSE_NOTIFY); }

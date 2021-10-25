@@ -57,12 +57,12 @@ class Channel_Impl
       /**
       * Send a warning alert
       */
-      virtual void send_warning_alert(Alert::Type type) = 0;
+      void send_warning_alert(Alert::Type type) { send_alert(Alert(type, false)); }
 
       /**
       * Send a fatal alert
       */
-      virtual void send_fatal_alert(Alert::Type type) = 0;
+      void send_fatal_alert(Alert::Type type) { send_alert(Alert(type, true)); }
 
       /**
       * Send a close notification alert
