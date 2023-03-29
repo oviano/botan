@@ -22,8 +22,8 @@ mkdir -p ../../ovlibs/ovcore/thirdparty/botan/android/x86
 cp botan_all.cpp ../../ovlibs/ovcore/thirdparty/botan/android/x86/
 cp botan_all.h ../../ovlibs/ovcore/thirdparty/botan/android/x86/
 cp src/lib/prov/pkcs11/pkcs11* ../../ovlibs/ovcore/thirdparty/botan/android/x86/
-mkdir -p ../../ovlibs/ovcore/thirdparty/botan/android/x8/botan
-cp build/include/botan/*.h ../../ovlibs/ovcore/thirdparty/botan/android/x8/botan/
+mkdir -p ../../ovlibs/ovcore/thirdparty/botan/android/x86/botan
+cp build/include/botan/*.h ../../ovlibs/ovcore/thirdparty/botan/android/x86/botan/
 
 python3 configure.py --minimized --enable-modules=tls,tls13,sqlite3,sessions_sqlite3,srp6,ed25519,curve25519,system_rng,bcrypt,crc32,hkdf,chacha20poly1305,nist_keywrap,ffi,aes_armv8,aes_ni,aes_power8,aes_vperm,chacha_avx2,ghash_cpu,ghash_vperm,idea_sse2,processor_rng,rdseed,serpent_avx2,sha1_armv8,sha1_sse2,sha1_x86,sha2_32_armv8,sha2_32_bmi2,sha2_32_x86,sha2_64_bmi2,sha3_bmi2,shacal2_avx2,shacal2_x86,simd,simd_avx2,sm4_armv8,external_allocator --amalgamation --os=android --cpu=x86_64 --cc=clang --cc-min-version=12.0 --cc-abi-flags="-arch x86_64" --disable-shared
 rm -rf ../../ovlibs/ovcore/thirdparty/botan/android/x86_64
